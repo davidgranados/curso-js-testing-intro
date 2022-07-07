@@ -41,7 +41,6 @@ describe('Test for books', () => {
       }, { name: 'The Hobbit', year: '1937', author: 'J.R.R. Tolkien' }]);
       // Act / When
       const response = await request(app).get('/api/v1/books');
-      console.log(response.body);
       // Assert / Then
       expect(response.status).toBe(200);
       expect(response.body.length).toBe(seedData.insertedCount);
